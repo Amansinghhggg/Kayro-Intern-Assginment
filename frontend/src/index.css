@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+
+  /* Nourish Warm Wellness Palette */
+  --bg-cream: #FBF9F5;
+  --bg-surface: #FFFFFF;
+  --bg-muted: #F4F1EA;
+  
+  --forest-900: #112A1F;
+  --forest-800: #1B3E2E;
+  --forest-700: #265741;
+  --forest-600: #367659;
+  --forest-100: #E8EFE9;
+
+  --sage-600: #527C65;
+  --sage-200: #D5E4D8;
+  --sage-100: #EBF2EC;
+  
+  --terracotta-600: #C86432;
+  --terracotta-500: #E07A4B;
+  --terracotta-100: #F7EBE1;
+
+  --text-main: #1C261F;
+  --text-muted: #5F6B62;
+
+  --border-light: #E8E5DD;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  background-color: var(--bg-cream);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, .font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--sage-200);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sage-600);
+}
+
+/* Hide scrollbar for clean horizontal swipe on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Smooth Transitions */
+button, a, input, select, textarea {
+  transition: all 0.15s ease-in-out;
+}
